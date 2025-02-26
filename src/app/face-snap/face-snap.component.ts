@@ -12,14 +12,19 @@ export class FaceSnapComponent implements OnInit {
   description!: string;
   createdAt!: Date;
   likes!: number;
+  imageUrl!: string;
 
   // maintenant on doit respecter notre promesse en les initialisant
   ngOnInit(): void { // c'est comme un constructeur mais ca ne les pas, c'est ici qu'on initialise les proprietes de notre component
-    this.title = 'oumarPhoto';
+    this.imageUrl = 'https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959_1280.jpg'
+    this.title = 'Archivald';
     this.description = 'Ma meilleure photo';
     this.createdAt = new Date();
-    this.likes = 0
-      
+    this.likes = 5;   
+  }
+  // methodes pour incrementer le nombre de likes
+  onAddLikes(): void {
+    this.likes++
   }
 }      
 
