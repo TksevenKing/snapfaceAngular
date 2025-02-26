@@ -3,13 +3,13 @@
  le string interpolation: {{}} et le attribute binding -->
 
 <div class="face-snap-card">
-    <img [src]="imageUrl" [alt]="title">
-    <h2>{{title}}</h2>
-    <p>{{ description }}</p>
-    <p>Mise en ligne le {{ createdAt }}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <h2>{{faceSnap.title}}</h2>
+    <p>{{ faceSnap.description }}</p>
+    <p>Mise en ligne le {{ faceSnap.createdAt }}</p>
     <p>
-        <button (click)="onAddLikes()" >Oh snap !</button>
-        likes: {{likes}}
+        <button (click)="onAddLikesOnce()" > {{ likesButtonText }} </button>
+        ❤️ {{faceSnap.likes}}
     </p>
     
 </div>
