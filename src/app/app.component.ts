@@ -14,29 +14,38 @@ export class AppComponent implements OnInit{
   myOtherSnap!: FaceSnap;
   myLastSnap!: FaceSnap;
 
+  // mettons tout dans un tableau pour les afficher dans une boucle
+  faceSnaps!: FaceSnap[];
+
+  
+
   ngOnInit(): void {
     // initialisatin des instances de FaceSnap
-      this.mySnap = new FaceSnap(
-        'https://cdn.pixabay.com/photo/2022/09/16/13/07/generated-7458584_640.jpg',
-        'African Queen',
-        'Africa has the more beautifull girl in the world !',
-        new Date(),
-        5
-      );
-      this.myOtherSnap = new FaceSnap(
-        'https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959_1280.jpg',
-        'Archivald',
-        'Ma meilleure photo',
-        new Date(),
-        5
-      );
-      this.myLastSnap = new FaceSnap(
-        'https://cdn.pixabay.com/photo/2024/05/31/10/48/woman-8800324_640.jpg',
-        'Astrid',
-        'Another Type of beauty',
-        new Date(),
-        10
-      )
+      this.faceSnaps = [
+          new FaceSnap(
+          'https://cdn.pixabay.com/photo/2022/09/16/13/07/generated-7458584_640.jpg',
+          'African Queen',
+          'Africa has the more beautifull girl in the world !',
+          new Date(),
+          200
+        ),
+        new FaceSnap(
+          'https://cdn.pixabay.com/photo/2017/11/19/07/30/girl-2961959_1280.jpg',
+          'Archivald',
+          'Ma meilleure photo',
+          new Date(),
+          28
+        ),
+        new FaceSnap(
+          'https://cdn.pixabay.com/photo/2024/05/31/10/48/woman-8800324_640.jpg',
+          'Astrid',
+          'Another Type of beauty',
+          new Date(),
+          99
+        )
+      ];
+
+      this.faceSnaps[2].setLocation('prise en Afrique')
   }
 
 }

@@ -1,15 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FaceSnap } from '../models/face-snap';
+import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-face-snap', // le nom <balise> correspondant
   standalone: true,  // veut dire qu'on a pas besoin de faire partie d'un module  pour pouvoir l'utiliser
-  imports: [], // Si je veux utiliser d'autres components dans celui la c'est ici que je les ajoute
+  imports: [ NgStyle, NgClass], // Si je veux utiliser d'autres components dans celui la c'est ici que je les ajoute
   templateUrl: './face-snap.component.html',
   styleUrl: './face-snap.component.scss'
 })
 export class FaceSnapComponent implements OnInit {
-  @Input() faceSnap!: FaceSnap; // je declare la classe FaceSnap comme propriete de cette classe qui permet de passer un attribut au selector dans le app component
+  @Input() faceSnap!: FaceSnap; // ici avec @input() on creer  l'atrribut faceSnap qui va etre passer par le component parent
   // title!: string;   
   // description!: string; // au lieu d'ecrire tout ca ici 
   // createdAt!: Date; // on veut pouvoir preciseer leur valeur pour chaque nouvel du component 
