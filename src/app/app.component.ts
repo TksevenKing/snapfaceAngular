@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { FaceSnapComponent } from './face-snap/face-snap.component';
 import { FaceSnap } from './models/face-snap';
 
@@ -20,7 +19,7 @@ export class AppComponent implements OnInit{
       this.mySnap = new FaceSnap(
         'https://cdn.pixabay.com/photo/2022/09/16/13/07/generated-7458584_640.jpg',
         'African Queen',
-        'Africa has the more beautofull girl in the world !',
+        'Africa has the more beautifull girl in the world !',
         new Date(),
         5
       );
